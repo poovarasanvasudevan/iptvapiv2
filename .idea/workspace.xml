@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96e1d417-c788-49c4-9b27-76bffdd6b5a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/run.js" beforeDir="false" afterPath="$PROJECT_DIR$/run.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner.sh" beforeDir="false" afterPath="$PROJECT_DIR$/runner.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609233345448</updated>
       <workItem from="1609233346638" duration="4318000" />
-      <workItem from="1609242954891" duration="4253000" />
+      <workItem from="1609242954891" duration="4843000" />
     </task>
     <servers />
   </component>
