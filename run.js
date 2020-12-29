@@ -102,12 +102,12 @@ function createData(json) {
     })
 
     Object.keys(globalCountry).map(key => {
-        country.push({code: key.split("!")[0], name: key.split("!")[1], count: globalCountry[key].length})
+        country.push({code: key.split("!")[0], name: key.split("!")[1] || key.split("!")[0], count: globalCountry[key].length})
         fs.writeFileSync(path.join(__dirname, 'api', 'country', `${key.split("!")[0]}.json`), JSON.stringify(globalCountry[key]));
     })
 
     Object.keys(globalLanguage).map(key => {
-        language.push({code: key.split("!")[0], name: key.split("!")[1], count: globalLanguage[key].length})
+        language.push({code: key.split("!")[0], name: key.split("!")[1] || key.split("!")[0], count: globalLanguage[key].length})
         fs.writeFileSync(path.join(__dirname, 'api', 'language', `${key.split("!")[0]}.json`), JSON.stringify(globalLanguage[key]));
     })
 
