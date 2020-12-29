@@ -55,8 +55,7 @@ function createData(json) {
         }
 
 
-
-        if(item.country == null) {
+        if (item.country == null) {
             if (globalCountry.hasOwnProperty("nocountry")) {
                 globalCountry['nocountry'].push(item)
             } else {
@@ -64,16 +63,16 @@ function createData(json) {
                 globalCountry['nocountry'].push(item)
             }
         } else {
-            if (globalCountry.hasOwnProperty(item.country.code + "!" +item.country.name)) {
-                globalCountry[item.country.code + "!" +item.country.name].push(item)
+            if (globalCountry.hasOwnProperty(item.country.code + "!" + item.country.name)) {
+                globalCountry[item.country.code + "!" + item.country.name].push(item)
             } else {
-                globalCountry[item.country.code + "!" +item.country.name] = []
-                globalCountry[item.country.code + "!" +item.country.name].push(item)
+                globalCountry[item.country.code + "!" + item.country.name] = []
+                globalCountry[item.country.code + "!" + item.country.name].push(item)
             }
         }
 
 
-        if(item.language == null || item.language.length === 0) {
+        if (item.language == null || item.language.length === 0) {
             if (globalLanguage.hasOwnProperty("nolanguage")) {
                 globalLanguage['nolanguage'].push(item)
             } else {
@@ -83,11 +82,11 @@ function createData(json) {
         } else {
 
             item.language.forEach((lang) => {
-                if (globalLanguage.hasOwnProperty(lang.code + "!" +lang.name)) {
-                    globalLanguage[lang.code + "!" +lang.name].push(item)
+                if (globalLanguage.hasOwnProperty(lang.code + "!" + lang.name)) {
+                    globalLanguage[lang.code + "!" + lang.name].push(item)
                 } else {
-                    globalLanguage[lang.code + "!" +lang.name] = []
-                    globalLanguage[lang.code + "!" +lang.name].push(item)
+                    globalLanguage[lang.code + "!" + lang.name] = []
+                    globalLanguage[lang.code + "!" + lang.name].push(item)
                 }
             })
 
@@ -98,17 +97,17 @@ function createData(json) {
 
 
     Object.keys(globalCategory).map(key => {
-        category.push({name: key, count: globalCategory[key].length})
+        category.push({name: key, code: key, count: globalCategory[key].length})
         fs.writeFileSync(path.join(__dirname, 'api', 'category', `${key}.json`), JSON.stringify(globalCategory[key]));
     })
 
     Object.keys(globalCountry).map(key => {
-        country.push({code: key.split("!")[0],name: key.split("!")[1], count: globalCountry[key].length})
+        country.push({code: key.split("!")[0], name: key.split("!")[1], count: globalCountry[key].length})
         fs.writeFileSync(path.join(__dirname, 'api', 'country', `${key.split("!")[0]}.json`), JSON.stringify(globalCountry[key]));
     })
 
     Object.keys(globalLanguage).map(key => {
-        language.push({code: key.split("!")[0],name: key.split("!")[1], count: globalLanguage[key].length})
+        language.push({code: key.split("!")[0], name: key.split("!")[1], count: globalLanguage[key].length})
         fs.writeFileSync(path.join(__dirname, 'api', 'language', `${key.split("!")[0]}.json`), JSON.stringify(globalLanguage[key]));
     })
 
