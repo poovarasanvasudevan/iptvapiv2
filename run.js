@@ -89,10 +89,7 @@ function createData(json) {
                     globalLanguage[lang.code + "!" + lang.name].push(item)
                 }
             })
-
-
         }
-
     })
 
 
@@ -114,5 +111,4 @@ function createData(json) {
     fs.writeFileSync(path.join(__dirname, 'api', 'category.json'), JSON.stringify(category));
     fs.writeFileSync(path.join(__dirname, 'api', 'country.json'), JSON.stringify(country));
     fs.writeFileSync(path.join(__dirname, 'api', 'language.json'), JSON.stringify(language));
-
 }
