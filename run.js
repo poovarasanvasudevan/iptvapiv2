@@ -27,6 +27,7 @@ http.get(URL, (res) => {
 
 
 function createData(json) {
+    console.log(json)
     fs.writeFileSync(path.join(__dirname, 'api', 'channel.json'), JSON.stringify(json));
 
     const category = []
