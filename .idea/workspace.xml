@@ -31,6 +31,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.19.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="10.17.50" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Projects/vscode-master" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -46,7 +47,9 @@
       <workItem from="1609242954891" duration="4983000" />
       <workItem from="1609256946703" duration="507000" />
       <workItem from="1609381174282" duration="713000" />
-      <workItem from="1609390989375" duration="1867000" />
+      <workItem from="1609390989375" duration="1879000" />
+      <workItem from="1609557978144" duration="31000" />
+      <workItem from="1609558044571" duration="9000" />
     </task>
     <servers />
   </component>
