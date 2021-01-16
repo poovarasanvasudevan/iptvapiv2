@@ -1,0 +1,14 @@
+[
+    {
+        "question":"Video not loading?",
+        "answer": "Some channels are restricted to some countries, due to this channels which are restricted may not load in other countries"
+    },
+    {
+        "question":"Bad Quality?",
+        "answer": "Make sure your Aspect Ratio set to 16:9 (Default) and try Again"
+    },
+    {
+        "question":"Video not loading after some time?",
+        "answer": "May be internet slow, or other netwok reason, please try the channel again"
+    }
+]
