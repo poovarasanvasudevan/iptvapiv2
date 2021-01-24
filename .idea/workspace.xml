@@ -19,6 +19,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KotlinMultiplatform">
+    <allAvailableExecutables />
+  </component>
   <component name="ProjectId" id="1mKDN2htMB9P0S8mQHeESabgvst" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -29,10 +32,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.19.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="10.17.50" />
+    <property name="javascript.nodejs.core.library.typings.version" value="10.17.51" />
     <property name="last_opened_file_path" value="$USER_HOME$/Projects/vscode-master" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -50,6 +56,8 @@
       <workItem from="1609390989375" duration="1879000" />
       <workItem from="1609557978144" duration="31000" />
       <workItem from="1609558044571" duration="9000" />
+      <workItem from="1611114460254" duration="702000" />
+      <workItem from="1611138275624" duration="599000" />
     </task>
     <servers />
   </component>
