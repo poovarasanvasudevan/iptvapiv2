@@ -1,6 +1,7 @@
 const http = require('https');
 const fs = require('fs');
 const path = require('path');
+const request = require('request');
 
 const URL = "https://iptv-org.github.io/iptv/channels.json"
 
@@ -25,6 +26,13 @@ http.get(URL, (res) => {
     console.error(error.message);
 });
 
+const download = (url, path, callback) => {
+    request.head(url, (err, res, body) => {
+        request(url)
+            .pipe(fs.createWriteStream(path))
+            .on('close', callback)
+    })
+}
 
 function createData(json) {
 
@@ -111,6 +119,12 @@ function createData(json) {
         language.push({code: key.split("!")[0], name: key.split("!")[1] || key.split("!")[0], count: globalLanguage[key].length})
         fs.writeFileSync(path.join(__dirname, 'api', 'language', `${key.split("!")[0]}.json`), JSON.stringify(globalLanguage[key]));
     })
+    Object.keys(globalCountry).map(key => {
+        download(`https://www.countryflags.io/${key.split("!")[0]}/flat/64.png`, path.join(__dirname,'api','country','flags',`${key.split("!")[0]}.png`), () =>{
+            console.log(`https://www.countryflags.io/${key.split("!")[0]}/flat/64.png`);
+        });
+    });
+
 
     fs.writeFileSync(path.join(__dirname, 'api', 'category.json'), JSON.stringify(category));
     fs.writeFileSync(path.join(__dirname, 'api', 'country.json'), JSON.stringify(country));
